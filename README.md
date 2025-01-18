@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+Frontend README
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##Project Overview
 
-## Available Scripts
+This is the frontend of the, built using React.js. The application provides an interface for users to:
 
-In the project directory, you can run:
+Log in or sign up.
 
-### `npm start`
+View, create, update, and delete invoices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Navigate through a responsive and user-friendly interface.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The frontend interacts with a backend API to perform CRUD operations on invoice data.
 
-### `npm test`
+##Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Authentication: Login and signup functionality with validation.
 
-### `npm run build`
+Dashboard: Displays invoices in a table format with sorting and pagination (if applicable).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Invoice Management: Add, edit, and delete invoices.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Navigation: Includes a navbar with dynamic options based on authentication status.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Responsive Design: Ensures usability across devices of all sizes.
 
-### `npm run eject`
+##Tech Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+React.js: Core library for building the UI.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+React Router: For routing and navigation.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Tailwind CSS: For styling the component.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Folder Structure
 
-## Learn More
+frontend/
+├── public/ # Public assets
+├── src/ # Source code
+│ ├── components/ # Reusable React components
+│ │ ├── Home.jsx # Home page displaying invoices
+│ │ ├── Invoice.jsx # Form for adding/editing invoices
+│ │ ├── Login.jsx # Login page
+│ │ ├── SignUp.jsx # Signup page
+│ │ ├── Navbar.jsx # Navigation bar
+│ │ └── NotFound.jsx # 404 error page
+│ ├── App.js # Main application file
+│ ├── App.css # Global styles
+│ └── index.js # Application entry point
+├── .gitignore # Files to be ignored by Git
+├── package.json # Project metadata and dependencies
+└── README.md # Documentation (this file)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Usage Instructions
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Authentication
 
-### Code Splitting
+Navigate to the Login Page at http://localhost:3000/login.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Use the Sign Up page to register if you don't have an account.
 
-### Analyzing the Bundle Size
+Log in with your credentials.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+##Managing Invoices
 
-### Making a Progressive Web App
+Once logged in, navigate to the Home Page to view all invoices.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Use the Create Invoice button to add a new invoice.
 
-### Advanced Configuration
+Click on an existing invoice to edit it.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Use the delete option to remove an invoice.
 
-### Deployment
+##Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Build the Application
 
-### `npm run build` fails to minify
+To create an optimized production build:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+npm run build
+
+##Deploy
+
+Upload the contents of the build/ folder to a hosting provider like Netlify, Vercel, or AWS.
+
+##Known Issues
+
+Clear browser cache if changes are not reflected after a new deployment.
+
+Future Enhancements
+
+Add pagination to the invoice table for better usability.
+
+Implement sorting and filtering options.
+
+Improve the authentication system with JWT tokens.
+
+##Contributing
+
+Contributions are welcome! Follow these steps:
+
+Fork the repository.
+
+Create a new branch (git checkout -b feature-branch-name).
+
+Commit your changes (git commit -m "Add feature").
+
+Push to the branch (git push origin feature-branch-name).
+
+Open a Pull Request.
